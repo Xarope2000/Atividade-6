@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Login e Cadastro</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; max-width: 300px; margin: auto; }
+  .hidden { display: none; }
+  input, button { width: 100%; padding: 10px; margin: 10px 0; }
+  a { cursor: pointer; color: blue; text-decoration: underline; display: block; text-align: center; }
+</style>
+</head>
+<body>
+
+<div id="login">
+  <h2>Login</h2>
+  <input type="email" placeholder="E-mail" required>
+  <input type="password" placeholder="Senha" required>
+  <button onclick="alert('Login enviado!')">Entrar</button>
+  <a onclick="toggle()">Cadastre-se</a>
+</div>
+
+<div id="cadastro" class="hidden">
+  <h2>Cadastro</h2>
+  <input type="text" placeholder="Nome" required>
+  <input type="email" placeholder="E-mail" required>
+  <input type="password" placeholder="Senha" required>
+  <button onclick="alert('Cadastro enviado!')">Cadastrar</button>
+  <a onclick="toggle()">Voltar ao login</a>
+</div>
+
+<script>
+  function toggle() {
+    document.getElementById('login').classList.toggle('hidden');
+    document.getElementById('cadastro').classList.toggle('hidden');
+  }
+</script>
+
+</body>
+</html>
